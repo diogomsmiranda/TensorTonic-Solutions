@@ -8,4 +8,4 @@ def entropy_node(y: list[int]) -> float:
     p = counts / len(y)
     
     log_p = np.log2(p, out=np.zeros_like(p), where=(p > 0))
-    return float(-np.sum(p * log_p))
+    return -np.sum(p * log_p)
